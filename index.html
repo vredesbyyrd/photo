@@ -139,10 +139,12 @@
         pswpModule: PhotoSwipe,
         gallery: '.section-images',
         children: 'a',
-        zoom: false,
         initialZoomLevel: 'fit',
         secondaryZoomLevel: 'fit',
         maxZoomLevel: 'fit',
+        imageClickAction: 'close',
+        tapAction: 'close',
+        doubleTapAction: false,
       });
       lightbox.init();
     </script>
