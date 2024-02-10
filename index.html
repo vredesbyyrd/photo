@@ -12,7 +12,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <link rel="stylesheet" href="assets/style.css">
   </head>
-  <body>
+  <body oncontextmenu="return false">
     <div id="container">
       <header>
         <div style="display: flex;">
@@ -121,7 +121,10 @@
       </footer>
     </div>
     <script type="module">
-      const observer = lozad();
+      const observer = lozad('.lozad', {
+          rootMargin: '500px 0px', 
+          threshold: 0.1,
+      });
       observer.observe();
 
       import { JustifiedGrid } from 'https://cdn.skypack.dev/@egjs/grid';
