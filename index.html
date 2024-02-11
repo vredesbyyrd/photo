@@ -9,7 +9,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="assets/eager-image-loader.min.js"></script>
+    <script>new EagerImageLoader();</script>
+    <script>
+      
+      window.fadeIn = function(obj) {
+          $(obj).fadeIn(1000);
+      }
+    </script>
     <link rel="stylesheet" href="assets/style.css">
   </head>
   <body oncontextmenu="return false">
@@ -40,7 +48,7 @@
                 data-pswp-width="2048"
                 data-pswp-height="1368"
                 target="_blank">
-                <img class="lozad" data-placeholder-background="#ffffff00" data-src="photos/section-1/thumbnail/DSC_8743.jpg" />
+                <img id="preload" onload="fadeIn(this)" data-src="photos/section-1/thumbnail/DSC_8743.jpg" style="display:none;" />
               </a>
               </div>
               <div style="width: 640px; height: 958px">
@@ -50,7 +58,7 @@
                 data-pswp-width="2048"
                 data-pswp-height="3066"
                 target="_blank">
-                <img class="lozad" data-placeholder-background="#ffffff00" data-src="photos/section-1/thumbnail/DSC_3664.jpg" />
+                <img id="preload" onload="fadeIn(this)" data-src="photos/section-1/thumbnail/DSC_3664.jpg" style="display:none;" />
               </a>
               </div>
               <div style="width: 640px; height: 427px">
@@ -60,7 +68,7 @@
                 data-pswp-width="2048"
                 data-pswp-height="1367"
                 target="_blank">
-                <img class="lozad" data-placeholder-background="#ffffff00" data-src="photos/section-1/thumbnail/DSC_3271.jpg" />
+                <img id="preload" onload="fadeIn(this)" data-src="photos/section-1/thumbnail/DSC_3271.jpg" style="display:none;" />
               </a>
               </div>
               <div style="width: 640px; height: 426px">
@@ -70,7 +78,7 @@
                 data-pswp-width="2048"
                 data-pswp-height="1365"
                 target="_blank">
-                <img class="lozad" data-placeholder-background="#ffffff00" data-src="photos/section-1/thumbnail/DSCF5538.jpg" />
+                <img id="preload" onload="fadeIn(this)" data-src="photos/section-1/thumbnail/DSCF5538.jpg" style="display:none;" />
               </a>
               </div>
               <div style="width: 640px; height: 960px">
@@ -80,7 +88,7 @@
                 data-pswp-width="2048"
                 data-pswp-height="3072"
                 target="_blank">
-                <img class="lozad" data-placeholder-background="#ffffff00" data-src="photos/section-1/thumbnail/DSCF4888.jpg" />
+                <img id="preload" onload="fadeIn(this)" data-src="photos/section-1/thumbnail/DSCF4888.jpg" style="display:none;" />
               </a>
               </div>
               <div style="width: 640px; height: 426px">
@@ -90,7 +98,7 @@
                 data-pswp-width="2048"
                 data-pswp-height="1365"
                 target="_blank">
-                <img class="lozad" data-placeholder-background="#ffffff00" data-src="photos/section-1/thumbnail/DSCF3541.jpg" />
+                <img id="preload" onload="fadeIn(this)" data-src="photos/section-1/thumbnail/DSCF3541.jpg" style="display:none;" />
               </a>
               </div>
               <div style="width: 640px; height: 960px">
@@ -100,7 +108,7 @@
                 data-pswp-width="2048"
                 data-pswp-height="3072"
                 target="_blank">
-                <img class="lozad" data-placeholder-background="#ffffff00" data-src="photos/section-1/thumbnail/DSCF2746.jpg" />
+                <img id="preload" onload="fadeIn(this)" data-src="photos/section-1/thumbnail/DSCF2746.jpg" style="display:none;" />
               </a>
               </div>
               <div style="width: 640px; height: 426px">
@@ -110,7 +118,7 @@
                 data-pswp-width="2048"
                 data-pswp-height="1365"
                 target="_blank">
-                <img class="lozad" data-placeholder-background="#ffffff00" data-src="photos/section-1/thumbnail/DSCF1977.jpg" />
+                <img id="preload" onload="fadeIn(this)" data-src="photos/section-1/thumbnail/DSCF1977.jpg" style="display:none;" />
               </a>
               </div>
             </div>
@@ -121,12 +129,6 @@
       </footer>
     </div>
     <script type="module">
-      const observer = lozad('.lozad', {
-          rootMargin: '500px 0px', 
-          threshold: 0.1,
-      });
-      observer.observe();
-
       import { JustifiedGrid } from 'https://cdn.skypack.dev/@egjs/grid';
       const options = {
         gap: 8,
