@@ -14,7 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.section-image { margin: 8px; }
+#gallery { margin: 8px; }
 
 header { margin: 0.5em auto 0 auto; text-align: left; font-family: 'ubuntu'; }
 header img.avatar { margin: auto 0.5em auto 0.5em; width: 22px; border-radius: 50%; }
