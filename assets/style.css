@@ -20,7 +20,7 @@ header { margin: 0.5em auto 0 auto; text-align: left; font-family: 'ubuntu'; }
 header img.avatar { margin: auto 0.5em auto 0.5em; width: 22px; border-radius: 50%; }
 header .title { font-size: 1em; font-weight: medium; line-height: 1.6em; -webkit-transform: scaleY(0.9) }
 header .description { line-height: 1.6em; }
-header nav { margin: 1em 0; }
+header nav { margin: 1.5em 0; }
 header nav a { margin: 0 0.6em; }
 
 .section { margin-top: 0em; }
