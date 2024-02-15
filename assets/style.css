@@ -45,9 +45,9 @@ footer .foto_footer { font-size: 0.8em; }
 There is no reason to enlarge
 an image in "single column mode", imo.
 I believe the breakpoint for JustifiedGrid
-becoming a single column is 441px (find out)
+becoming a single column is 487px (find out)
 There is probably a better way to do this...*/
-@media screen and (max-width: 441px) {
+@media screen and (max-width: 487px) {
   img {
     pointer-events: none;
   }
