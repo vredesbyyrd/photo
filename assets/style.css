@@ -1,14 +1,15 @@
 @media (prefers-color-scheme: light) {
-  body { color: #000000; background: #f9f9f9; }
+  body, a { color: #000000; background: #f9f9f9; }
+  a:hover { color: #3c3c3c; }
 }
 @media (prefers-color-scheme: dark) {
-  body { color: #f9f9f9; background: #1e1e1e; }
+  body, a { color: #f9f9f9; background: #1e1e1e; }
+  a:hover { color: #ffffff; }
   img[src*=svg] { filter: invert(90%) grayscale(30%); }
 }
 
 * { margin: 0; padding: 0; }
-a { text-decoration: none; color: #bb2222; }
-a:hover { color: #dd1144; }
+a { text-decoration: none; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,16 +17,16 @@ body {
 
 #gallery { margin: 8px; }
 
-header { margin: 0.5em auto 0 auto; text-align: left; font-family: 'ubuntu'; }
-header img.avatar { margin: auto 0.5em auto 0.5em; width: 22px; border-radius: 50%; }
-header .title { font-size: 1em; font-weight: medium; line-height: 1.6em; -webkit-transform: scaleY(0.9) }
+header { margin: 0.5em auto 0 auto; text-align: left; font-family: 'DejaVu Sans Mono'; }
+header img.avatar { margin: auto 0.5em auto 0.5em; width: 18px; border-radius: 50%; }
+header .title { font-size: 0.9em; line-height: 1.6em; -webkit-transform: scaleY(0.9); -webkit-transform: scaleX(0.9) }
 header .description { line-height: 1.6em; }
 header nav { margin: 1.5em 0; }
 header nav a { margin: 0 0.6em; }
 
 .section { margin-top: 0em; }
 .section-header-wrapper { max-width: 800px; margin-left: 4em; }
-.section-title { font-family: 'Roboto'; font-size: 1.6em; font-weight: medium; line-height: 1.6em; }
+.section-title { font-family: 'Roboto'; font-size: 1.6em; line-height: 1.6em; }
 .section-description { line-height: 1.4em; }
 .section-images { margin-top: 0em; }
 
@@ -53,13 +54,10 @@ There is probably a better way to do this...*/
   }
 }
 
-/* fade lazy loading...not sure how reliable this is */
-/*.lozad {
-   opacity: 0;
-   transition: opacity 1000ms ease 100ms;
-}
-
-.lozad[data-loaded] {
-   opacity: 1;
+/*.contact {
+  position:absolute;
+  top:10px;
+  right: 10px;
+  font-family: 'Iosevka Thin';
 }*/
 
