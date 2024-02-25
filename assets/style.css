@@ -19,7 +19,7 @@ body {
 
 header { margin: 0.5em auto 0 auto; text-align: left; }
 header img.avatar { margin: auto 0.8em auto 0.5em; width: 18px; border-radius: 50%; }
-header .title { font-size: 0.9em; line-height: 1.6em; -webkit-transform: scaleY(0.9); }
+header .title { font-size: 0.9em; line-height: 1.6em; -webkit-transform: scaleY(1.0); }
 header .description { line-height: 1.6em; }
 header nav { margin: 1.5em 0; }
 header nav a { margin: 0 0.6em; }
